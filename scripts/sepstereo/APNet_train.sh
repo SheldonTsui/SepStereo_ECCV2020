@@ -1,0 +1,26 @@
+python train.py --name APNet_sepstereo \
+    --hdf5FolderPath YOUR_FAIR_PLAY_SPLIT_PATH \
+    --MUSICPath ./data/dummy_MUSIC_split \
+    --dataset_mode sepstereo \
+    --save_epoch_freq 10 \
+    --display_freq 10 \
+    --save_latest_freq 100 \
+    --batchSize 144 \
+    --learning_rate_decrease_itr 5 \
+    --niter 100 \
+    --lr_visual 1e-5 \
+    --lr_audio 5e-4 \
+    --nThreads 36 \
+    --gpu_ids 0,1,2,3 \
+    --validation_on \
+    --validation_freq 50 \
+    --validation_batches 50 \
+    --fusion_model APNet \
+    --loss_mode l1 \
+    --decay_factor 0.9 \
+    --sep_loss_weight 0.4 \
+    --val_return_key stereo_loss_fusion \
+    --weights_visual checkpoints/APNet_sep/visual_best.pth \
+    --weights_audio checkpoints/APNet_sep/audio_best.pth \
+    --weights_fusion checkpoints/APNet_sep/fusion_best.pth \
+    --tensorboard True |& tee -a logs/APNet_sepstereo.log

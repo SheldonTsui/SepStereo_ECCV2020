@@ -1,0 +1,11 @@
+checkpoints/
+eval_demo/
+logs/
+__pycache__/
+*/__pycache__/
+runs/
+backup/
+results.txt
+*.swp
+*backup.py
+

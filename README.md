@@ -27,8 +27,15 @@ As illustrated in our supplementary material, you'd better choose those instrume
 All the training and testing bash scripts can be found in *'./scripts'*. Before training, please prepare stereo data as the instructions in [**FAIR-Play**](https://github.com/facebookresearch/FAIR-Play). For **MUSIC21** dataset, please the videos into 10s clips and formulate the data split as *'./data/dummy_MUSIC_split'*.
 
 ## License and Citation
-The use of this software is RESTRICTED to **non-commercial research a
-nd educational purposes**.
+The usage of this software is under [CC-BY-4.0](https://github.com/SheldonTsui/SepStereo_ECCV2020/blob/master/LICENSE).
+```
+@inproceedings{zhou2020sep,
+  title={Sep-Stereo: Visually Guided Stereophonic Audio Generation by Associating Source Separation},
+  author={Zhou, Hang and Xu, Xudong and Lin, Dahua and Wang, Xiaogang and  Liu, Ziwei},
+  booktitle={Proceedings of the European Conference on Computer Vision (ECCV)},
+  year={2020}
+}
+```
 
 ## Acknowledgement
 The structure of this codebase is borrowed from [2.5D Visual Sound](https://github.com/facebookresearch/2.5D-Visual-Sound).

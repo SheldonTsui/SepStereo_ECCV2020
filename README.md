@@ -1,5 +1,7 @@
 # Sep-Stereo: Visually Guided Stereophonic Audio Generation by Associating Source Separation (ECCV 2020)
 
+[Hang Zhou*](https://hangz-nju-cuhk.github.io/), [Xudong Xu*](https://sheldontsui.github.io/), [Dahua Lin](http://dahua.me), [Xiaogang Wang](http://www.ee.cuhk.edu.hk/~xgwang/), and [Ziwei Liu](https://liuziwei7.github.io/), .
+
 We propose to integrate the task of stereophonic audio generation and audio source separation into a unified framework namely **Sep-Stereo**, which leverages vastly available mono audios to facilitate the training of stereophonic audio generation. Moreover, we design Associative Pyramid Network (APNet) which better associates the visual features and the audio features with a learned Associative-Conv operation, leading to performance improvement in both two tasks. 
 
 [[Project]](https://hangz-nju-cuhk.github.io/projects/Sep-Stereo) [[Paper]](https://hangz-nju-cuhk.github.io/projects/Sep-Stereo) [[Demo]](https://www.youtube.com/watch?v=njn7ctayUcI)

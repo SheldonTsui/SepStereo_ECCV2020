@@ -1,4 +1,4 @@
-# SepStereo: Visually Guided Stereophonic Audio Generation by Associating Source Separation (ECCV 2020)
+# Sep-Stereo: Visually Guided Stereophonic Audio Generation by Associating Source Separation (ECCV 2020)
 
 We propose to integrate the task of stereophonic audio generation and audio source separation into a unified framework namely **Sep-Stereo**, which leverages vastly available mono audios to facilitate the training of stereophonic audio generation. Moreover, we design Associative Pyramid Network (APNet) which better associates the visual features and the audio features with a learned Associative-Conv operation, leading to performance improvement in both two tasks. 
 
@@ -7,10 +7,10 @@ We propose to integrate the task of stereophonic audio generation and audio sour
 <img src='teaser.png' width=880>
 
 ## Requirements
-* [python 3](https://www.python.org/download/releases/3.6/)
-* [PyTorch](https://pytorch.org/)（version >= 0.4.1)
-* [opencv3](https://opencv.org/releases.html)
-* [mmcv](https://github.com/open-mmlab/mmcv)
+* Python 3.6 is used. Basic requirements are listed in the 'requirements.txt'
+```
+pip install -r requirements.txt 
+```
 
 ## Dataset
 

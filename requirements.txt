@@ -1,0 +1,11 @@
+torch>=0.4.1
+torchvision
+mmcv
+numpy>=1.15.4
+opencv-python>=3.4.3.18
+tensorboard==1.14.0
+natsort
+mir_eval
+h5py
+librosa
+tqdm

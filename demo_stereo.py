@@ -13,7 +13,7 @@ from options.test_options import TestOptions
 import torchvision.transforms as transforms
 import torch
 import torchvision
-from data.audioVisual_dataset import generate_spectrogram
+from data.stereo_dataset import generate_spectrogram
 from models.networks import VisualNet, VisualNetDilated, AudioNet, AssoConv, APNet, weights_init 
 
 def audio_normalize(samples, desired_rms = 0.1, eps = 1e-4):
@@ -129,7 +129,7 @@ def main():
             vfeat = net_visual(frame) 
             if net_fusion is not None: 
                 upfeatures, output = net_audio(audio_diff, audio_mix, vfeat, return_upfeatures=True)
-                output.append(net_fusion(audio_mix, vfeat, upfeatures)) 
+                output.update(net_fusion(audio_mix, vfeat, upfeatures)) 
             else:
                 output = net_audio(audio_diff, audio_mix, vfeat)
 

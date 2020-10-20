@@ -80,6 +80,7 @@ def main():
         raise TypeError("Please input correct fusion model type") 
 
     if net_fusion is not None and len(opt.weights_fusion) > 0:
+        print('Loading weights for fusion stream')
         net_fusion.load_state_dict(torch.load(opt.weights_fusion), strict=True)
 
     net_visual.to(opt.device)
@@ -132,7 +133,7 @@ def main():
             audio, audio_rate = librosa.load(input_audio_path, sr=opt.audio_sampling_rate, mono=True)
             #randomly get a start time for 6s audio segment
             audio_len = len(audio) / audio_rate
-            audio_start_time = random.uniform(audio_margin, audio_len - opt.audio_length - audio_margin)
+            audio_start_time = random.uniform(audio_margin, audio_len - 6 - audio_margin)
             audio_end_time = audio_start_time + 6
             audio_start = int(audio_start_time * opt.audio_sampling_rate)
             audio_end = audio_start + chosen_audio_len 
